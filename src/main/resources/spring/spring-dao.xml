@@ -46,5 +46,12 @@
         <!-- 给出需要扫描的Dao接口-->
         <property name="basePackage" value="com.wentjiang.dao"/>
     </bean>
+    
+	<!-- 注入redisdao -->
+	<bean id="redisDao" class="com.wentjiang.dao.cache.RedisDao">
+		<constructor-arg index="0" value="localhost"/>
+		<constructor-arg index="1" value="6379"/>
+	</bean>
+	
 	
 </beans>
