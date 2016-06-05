@@ -4,7 +4,7 @@
     "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.wentjiang.dao.SeckillDao">
 	<!-- 目的:为dao接口方法提供sql语句配置 -->
-	<update id="reducNumber" >
+	<update id="reduceNumber" >
 		<!-- 具体的sql -->
 		update
 			seckill
@@ -16,7 +16,7 @@
 		and number >0;
 	</update>
 	<select id="queryById" resultType="Seckill" parameterType="long">
-		select seckill_id,name,numer,start_time,end_time,create_time
+		select seckill_id,name,number,start_time,end_time,create_time
 		from seckill
 		where seckill_id = #{seckillId}
 	</select>	
